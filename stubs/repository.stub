@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\{{ model }};
+use App\Interfaces\{{ model }}\{{ model }}Interface;
+
+class {{ class }} implements {{ model }}Interface
+{
+    public function __construct(
+        protected {{ model }} $model
+    ) {}
+}

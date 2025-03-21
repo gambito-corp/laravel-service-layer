@@ -1,0 +1,32 @@
+{
+  "name": "gambito-corp/laravel-service-layer",
+  "description": "A Laravel package that provides tools for implementing a service layer architecture, including commands for generating interfaces, repositories, and services. It simplifies the creation of a robust service layer structure in Laravel applications, promoting better code organization and separation of concerns.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gambito Code",
+      "email": "asesor.pedro@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^12.0",
+    "livewire/livewire": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GambitoCorp\\LaravelServiceLayer\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GambitoCorp\\LaravelServiceLayer\\ServiceLayerServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
