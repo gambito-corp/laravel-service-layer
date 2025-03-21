@@ -1,31 +1,22 @@
-### 1. Agregar el repositorio local
-En el archivo `composer.json` de tu proyecto Laravel, agrega el siguiente bloque para incluir el paquete como un repositorio local:
+# Laravel Service Layer
 
+**Laravel Service Layer** es un paquete diseñado para facilitar la implementación de una arquitectura de capa de servicio en aplicaciones Laravel. Este paquete incluye comandos para generar interfaces, repositorios y servicios, simplificando la creación de componentes organizados y promoviendo la separación de responsabilidades.
 
-"repositories": [
-{
-"type": "path",
-"url": "../packages/laravel-service-layer",
-"options": {
-"symlink": true
-}
-}
-],
-"require": {
-"gambito-corp/laravel-service-layer": "@dev"
-}
+---
 
+## Instalación
 
-### 2. Instalar el paquete
+### 1. Instalar el paquete desde Packagist
 Ejecuta el siguiente comando en la terminal desde la raíz de tu proyecto Laravel:
 
-composer update
+composer require gambito-corp/laravel-service-layer
 
+`composer require gambito-corp/laravel-service-layer`
 
-### 3. Publicar los stubs
+### 2. Publicar los stubs
 Si deseas personalizar los archivos stub utilizados por el paquete, publícalos con el siguiente comando:
 
-php artisan vendor:publish --tag=laravel-service-layer-stubs
+`php artisan vendor:publish --tag=laravel-service-layer-stubs`
 
 Esto copiará los stubs a la carpeta `stubs/` de tu proyecto.
 
@@ -48,25 +39,6 @@ php artisan make:all {name} [--options]
 - `--r|resource`: Crear controlador tipo recurso.
 - `--sl|service-layer`: Crear capa de servicio (interface, repository y service).
 - `--a|all`: Crear todos los componentes.
-
-
----
-
-## Estructura generada
-
-Al ejecutar los comandos, se generará automáticamente una estructura organizada en tu proyecto Laravel:
-
-app/
-├── Interfaces/
-│ └── Product/
-│ └── ProductInterface.php
-├── Repositories/
-│ └── Product/
-│ └── ProductRepository.php
-└── Services/
-└── Product/
-└── ProductService.php
-
 
 ---
 
